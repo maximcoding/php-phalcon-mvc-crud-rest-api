@@ -13,7 +13,6 @@ $router = new Router();
      'action' => 'index'
  ));
 
-
  //Get one element. Ex: /user/2
  $router->addGet('/:controller/:int', array(
      'controller' => 1,
