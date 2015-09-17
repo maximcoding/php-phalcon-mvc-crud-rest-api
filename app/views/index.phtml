@@ -1,0 +1,32 @@
+<html>
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="description" content="Phalcon examine">
+      <meta name="author" content="Maxim Livshitz">
+      <title>EXAM</title>
+      <?php $this->assets->outputCss(); ?> 
+      <?php $this->assets->outputJs(); ?>  
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+   </head>
+   <body>
+      <nav class="navbar navbar-default" role="navigation">
+         <div class="container">
+	<div class="navbar-header">
+	   <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+	      <span class="sr-only">Toggle navigation</span>
+	      <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+	   </button>
+	</div>
+	<?php echo $this->getContent(); ?>
+	<footer class="jumbotron text-center">
+	      Maxim Livshitz 2015
+	</footer>
+	</body>
+	</html>
+
+

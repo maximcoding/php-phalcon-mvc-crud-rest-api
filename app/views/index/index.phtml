@@ -1,0 +1,26 @@
+<?php echo $this->getContent() ?>
+
+<?php echo $this->tag->form(array("autocomplete" => "off", 'id' => 'thisForm')) ?>
+<table class="table table-striped">
+   <tr>
+      <th>Id</th>
+      <th>Username</th>
+      <th>Email</th>
+      <th>click get by Id</th>
+   </tr>
+</table>
+</form>
+
+
+<div class="jumbotron">
+   <a class="btn" href="http://localhost/exam/user">click list all</a>
+   <div class="alert alert-success" id="user-details">
+   </div>
+   
+</div>
+
+<script type="text/javascript">
+  $(document).ready(getUsers);
+</script>
+
+

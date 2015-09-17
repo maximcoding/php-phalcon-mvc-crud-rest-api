@@ -1,0 +1,22 @@
+	<!-- Collect the nav links, forms, and other content for toggling -->
+	<div class="collapse navbar-collapse navbar-ex1-collapse">
+	   <ul class="nav navbar-nav">
+	      <li class="btn">
+	          <?= $this->tag->linkTo(array('user/index', 'Index')) ?>
+	      </li>
+	      <li class="btn">
+	          <?= $this->tag->linkTo(array('session/logout', 'Logout')) ?>
+	      </li>
+	   </ul>
+	</div>	
+	<!-- /.navbar-collapse -->
+         </div>
+         <!-- /.container -->
+      </nav>
+      <p><?php $this->flash->output() ?></p>
+
+      <div class="container main-container">
+          <?php echo $this->getContent(); ?>
+      </div>
+
+ 

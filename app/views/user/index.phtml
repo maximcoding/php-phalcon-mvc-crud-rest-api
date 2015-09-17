@@ -1,0 +1,98 @@
+<?php
+
+ use Phalcon\Tag; ?>
+
+<?php echo $this->getContent() ?>
+
+<div class="container">
+   <!-- Nav tabs -->
+   <ul class="nav nav-tabs" role="tablist">
+      <li class="active"><a href="#daftar" role="tab" data-toggle="tab">Users</a></li>
+      <li><a href="#new" role="tab" data-toggle="tab">New</a></li>
+      <li>		 
+          <?php echo $this->tag->form(array("user/search", "autocomplete" => "off", 'id' => 'searchForm')) ?>
+         <input type="text" class="form-control input-sm"  name="id" placeholder="User id">
+      </li><li>
+          <?php echo $this->tag->submitButton(array("Search", 'class' => 'btn btn-success btn-sm')) ?>
+         </form>
+      </li>
+   </ul>
+   <!-- Tab panes -->
+   <div class="tab-content">
+      <div class="tab-pane active" id="daftar">
+         <div class="table-responsive">
+	<table class="table table-striped">
+	   <thead>
+	      <tr>
+	         <th>ID</th>
+	         <th>username</th>
+	         <th>email</th>
+	         <th>Access Group</th>
+	         <th></th>
+	      </tr>
+	   </thead>
+	   <tbody>
+	       <?php foreach ($page->items as $user) { ?>
+   	      <tr>
+   	         <td><?php echo $user->id ?></td>
+   	         <td><a class="btn btn-info" onclick="getUser(<?php echo $user->id ?>)"><?php echo $user->username ?></a></td>
+   	         <td><?php echo $user->email ?></td>
+   	         <td><?php echo $user->access_group_id ?></td>
+   	         <td></td>
+   	         <td> 
+		    <?php echo $this->tag->linkTo(array("user/edit/" . $user->id, 'class' => 'btn glyphicon glyphicon-pencil')); ?> 
+   		     <a class="btn glyphicon  glyphicon-trash"  onclick="deleteUser(<?php echo $user->id ?>)"></a>
+   	         </td>
+   	      </tr>
+	       <?php } ?>
+	   <div class="alert alert-success" id="user-details"></div>
+
+	   </tbody>
+	</table>
+         </div>
+         <div class="btn-group-sm">
+	 <?php echo $this->tag->linkTo(array("user/search", "First", 'class' => 'btn')) ?>
+	 <?php echo $this->tag->linkTo(array("user/search?page=" . $page->before, "Previous", 'class' => 'btn')) ?>
+	 <?php echo $this->tag->linkTo(array("user/search?page=" . $page->next, "Next", 'class' => 'btn')) ?>
+	 <?php echo $this->tag->linkTo(array("user/search?page=" . $page->last, "Last", 'class' => 'btn')) ?>
+	 <?php echo '<span class="text-info">' . $page->current, "/", $page->total_pages . '</span>' ?>
+         </div>
+         </tbody>
+      </div>
+
+
+      <div class="tab-pane" id="new">
+         <br/>
+         <br/>
+         <form role="form" action="" method="POST" enctype="application/json" id="newUserForm">
+	<div class="form-group">
+	   <label for="username">Username</label>
+	   <input type="text" class="form-control" name="username" id="username" placeholder="Enter username">
+	</div>
+	<div class="form-group">
+	   <label for="email">Email</label>
+	   <input type="email" class="form-control" name="email" id="email" placeholder="Enter email">
+	</div>
+	<div class="form-group">
+	   <label for="password">Password</label>
+	   <input type="password" class="form-control" name="password" id="password" placeholder="Password">
+	</div>
+	<td class="btn-group">
+	    <?php echo $this->tag->submitButton(array("Save", 'class' => 'btn btn-success')) ?>
+	    <?php echo $this->tag->linkTo(array("user/index", "Go Back", 'class' => 'btn')) ?>
+	</td>
+         </form>
+         <br/>
+      </div>
+   </div>
+</div>
+<script type="text/javascript">
+  $('#newUserForm').submit(addUser);
+</script>
+<div id="result"></div>
+
+
+
+
+
+

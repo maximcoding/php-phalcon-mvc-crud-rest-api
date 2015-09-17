@@ -1,0 +1,60 @@
+<?php
+
+ use Phalcon\Tag; ?>
+
+<?php echo $this->getContent() ?>
+
+<div class="container">
+   <!-- Nav tabs -->
+   <ul class="nav nav-tabs" role="tablist">
+      <li class="active"><a href="#daftar" role="tab" data-toggle="tab">Users</a></li>
+      <li><?php echo $this->tag->linkTo(array("user/index", "Go Back", 'class' => 'btn')) ?></li>
+   </ul>
+   <!-- Tab panes -->
+   <div class="tab-content">
+      <div class="tab-pane active" id="daftar">
+         <div class="table-responsive">
+	<table class="table table-striped">
+	   <thead>
+	      <tr>
+	         <th>ID</th>
+	         <th>username</th>
+	         <th>email</th>
+	         <th>Access Group</th>
+	         <th></th>
+	      </tr>
+	   </thead>
+	   <tbody>
+	       <?php foreach ($page->items as $user) { ?>
+   	      <tr>
+   	         <td><?php echo $user->id ?></td>
+   	         <td><?php echo $user->username ?></td>
+   	         <td><?php echo $user->email ?></td>
+   	         <td><?php echo $user->access_group_id ?></td>
+   	         <td> <?php echo $this->tag->linkTo(array("user/edit/" . $user->id, "Edit", 'class' => 'btn glyphicon glyphicon-edit')); ?> </td>
+   	         <td> <?php echo $this->tag->linkTo(array("user/delete/" . $user->id, 'class' => 'btn glyphicon glyphicon-trash')); ?> </td>
+   	      </tr>
+	       <?php } ?>
+	   </tbody>
+	</table>
+         </div>
+         <div class="btn-group-sm">
+	<?php echo $this->tag->linkTo(array("user/search", "First", 'class' => 'btn')) ?>
+	<?php echo $this->tag->linkTo(array("user/search?page=" . $page->before, "Previous", 'class' => 'btn')) ?>
+	<?php echo $this->tag->linkTo(array("user/search?page=" . $page->next, "Next", 'class' => 'btn')) ?>
+	<?php echo $this->tag->linkTo(array("user/search?page=" . $page->last, "Last", 'class' => 'btn')) ?>
+	<?php echo '<span class="text-info">' . $page->current, "/", $page->total_pages . '</span>' ?>
+         </div>
+         </tbody>
+      </div>
+
+
+   </div>
+</div>
+
+
+
+
+
+
+
