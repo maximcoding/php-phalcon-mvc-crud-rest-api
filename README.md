@@ -1,2 +1,3 @@
-#PHALCON REST SERVICE - USER MANAGER
-#Maxim Livshitz 2015 
+#USER MANAGER
+Phalcon Framework - PHP
+Maxim Livshitz 2015 
