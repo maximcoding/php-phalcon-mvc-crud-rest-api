@@ -7,20 +7,16 @@ Maxim Livshitz 2015
 _____________________________________
 
 User roles and access permisions (read only | or CRUD ).
-______________________
-Config file :
-_________________
-<?php
-defined('APP_PATH') || define('APP_PATH', realpath('..'));
-return new \Phalcon\Config(array(
-    'database' => array(
+________________________________________
+CONFIG FILE : 
+
         'adapter'     => 'Mysql',
         'host'        => '127.0.0.1',
         'username'    => 'root',
         'password'    => 'moloko',
         'dbname'      => 'phalconDB',
         'charset'     => 'utf8',
-    ),
+
     'application' => array(
         'controllersDir' => APP_PATH . '/app/controllers/',
         'modelsDir'      => APP_PATH . '/app/models/',
@@ -30,8 +26,6 @@ return new \Phalcon\Config(array(
         'libraryDir'     => APP_PATH . '/app/library/',
         'cacheDir'       => APP_PATH . '/app/cache/',
         'baseUri'        => '/exam/',
-    )
-));
 
 
 
