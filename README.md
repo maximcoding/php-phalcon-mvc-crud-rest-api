@@ -1,6 +1,7 @@
-#USER MANAGER 
-Technologies :
-Phalcon MVC Framework (PHP) ,jQuery,js, Bootstrap.css, MySQL, Web Service with JSON
+# User Management #
+
+Technologies:
+* Phalcon MVC Framework (PHP) ,jQuery,js, Bootstrap.css, MySQL, Web Service with JSON
 -------------------------
 Maxim Livshitz 2015 
 
