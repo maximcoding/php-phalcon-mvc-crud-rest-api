@@ -2,10 +2,13 @@
 ________________________________________
 
 #### Technologies: ####
-* ``` High Performance PHP Framework , jQuery, Bootstrap, MySQL, Web Services ```
+- [x] PHP Phalcon Framework , 
+- [x] MySQL
+- [x] jQuery
+- [x] Bootstrap
 
 #### Description: ####
-CRUD User roles and access permisions.
+REST API CRUD App, to manage users, roles, and it access permisions.
 ________________________________________
 
 CONFIG FILE : 
