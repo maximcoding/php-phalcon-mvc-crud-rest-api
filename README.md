@@ -1,7 +1,7 @@
 # User Management #
 
 Technologies:
-* ``` Phalcon (PHP), jQuery,js, Bootstrap.css, MySQL, Web Services
+* ``` Phalcon (PHP), jQuery,js, Bootstrap.css, MySQL, Web Services ```
 
 CRUD User roles and access permisions.
 ________________________________________
@@ -27,5 +27,5 @@ CONFIG FILE :
 
 
 
-``` ® Maxim Livshitz 2015 
+``` ® Maxim Livshitz 2015 ```
 
