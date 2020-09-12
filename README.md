@@ -1,8 +1,10 @@
 ### MVC User Management ###
+________________________________________
 
-Technologies:
+#### Technologies: ####
 * ``` High Performance PHP Framework , jQuery, Bootstrap, MySQL, Web Services ```
 
+#### Description: ####
 CRUD User roles and access permisions.
 ________________________________________
 
@@ -25,6 +27,7 @@ CONFIG FILE :
         'cacheDir'       => APP_PATH . '/app/cache/',
         'baseUri'        => '/exam/',
 
+________________________________________
 
 
 ``` ® Maxim Livshitz 2015 ```
