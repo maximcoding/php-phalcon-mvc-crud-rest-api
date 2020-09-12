@@ -1,7 +1,7 @@
-# User Management #
+# User Management MVC #
 
 Technologies:
-* ``` Phalcon (PHP), jQuery,js, Bootstrap.css, MySQL, Web Services ```
+* ``` High Performance PHP Framework , jQuery, Bootstrap, MySQL, Web Services ```
 
 CRUD User roles and access permisions.
 ________________________________________
