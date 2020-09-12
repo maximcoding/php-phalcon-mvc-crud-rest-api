@@ -1,4 +1,4 @@
-# User Management MVC #
+MVC User Management
 
 Technologies:
 * ``` High Performance PHP Framework , jQuery, Bootstrap, MySQL, Web Services ```
