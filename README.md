@@ -1,12 +1,11 @@
 # User Management #
 
 Technologies:
-* Phalcon MVC Framework (PHP) ,jQuery,js, Bootstrap.css, MySQL, Web Services
--------------------------
-Maxim Livshitz 2015 
+* ``` Phalcon (PHP), jQuery,js, Bootstrap.css, MySQL, Web Services
 
-User roles and access permisions (read only | or CRUD ).
+CRUD User roles and access permisions.
 ________________________________________
+
 CONFIG FILE : 
 
         'adapter'     => 'Mysql',
@@ -28,4 +27,5 @@ CONFIG FILE :
 
 
 
+``` ® Maxim Livshitz 2015 
 
